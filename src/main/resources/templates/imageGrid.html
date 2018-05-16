@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageGrid</title>
+</head>
+<body>
+<tr th:if="${imageList.empty}">
+    <td colspan="3">No Images</td>
+</tr>
+<tr th:each="Image : ${imageList}" >
+    <td>
+        <form id="delete" th:action="@{/deleteFile}" method="get" >
+            <button form="delete" th:value = "${Image.id}" name="id" onclick="javascript:getUniqueButtonValue($(this).val()); ">Delete</button>
+        </form>
+    </td>
+
+    <img th:src="${Image.S3link}"  width="10%" height="10%"/>
+
+</tr>
+</body>
+</html>
+

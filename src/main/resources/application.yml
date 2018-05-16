@@ -1,0 +1,5 @@
+amazonProperties:
+endpointUrl: https://s3.us-west-2.amazonaws.com
+accessKey: AKIAJOZ2S3OHDLU2ZGAA
+secretKey: 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
+bucketName: my-amazing-spring-bucket
