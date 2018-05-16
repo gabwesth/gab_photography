@@ -1,7 +1,6 @@
-package com.springproject.webformtrialwiths3.Controller;
+package com.springproject.gab_photography.Controller;
 
-
-import com.springproject.webformtrialwiths3.Dao.ImageRepository;
+import com.springproject.gab_photography.Dao.ImageRepository;
 import com.springproject.webformtrialwiths3.Service.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

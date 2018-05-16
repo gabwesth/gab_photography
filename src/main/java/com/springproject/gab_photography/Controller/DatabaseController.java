@@ -1,7 +1,7 @@
-package com.springproject.webformtrialwiths3.Controller;
+package com.springproject.gab_photography.Controller;
 
-import com.springproject.webformtrialwiths3.Dao.ImageRepository;
-import com.springproject.webformtrialwiths3.Entity.Image;
+import com.springproject.gab_photography.Dao.ImageRepository;
+import com.springproject.gab_photography.Entity.Image;
 import com.springproject.webformtrialwiths3.Service.AmazonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.springproject.webformtrialwiths3.Dao;
+package com.springproject.gab_photography.Dao;
 
-import com.springproject.webformtrialwiths3.Entity.Image;
+import com.springproject.gab_photography.Entity.Image;
 import org.springframework.data.repository.CrudRepository;
 
 

@@ -1,4 +1,4 @@
-package com.springproject.webformtrialwiths3.Entity;
+package com.springproject.gab_photography.Entity;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
