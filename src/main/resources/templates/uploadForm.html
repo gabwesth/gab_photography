@@ -2,28 +2,19 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th=" http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/css/upload.css"  th:href="@{/css/upload.css}"/>
+    <link rel="stylesheet" href="../static/assets/css/upload.css" th:href="@{/assets/css/upload.css}" />
 
     <title>Title</title>
 </head>
 <body>
 
-<header>
-    <h1>HTML5 File Upload with jQuery and PHP</h1>
-</header>
+<form method="POST", enctype="multipart/form-data" action="/upload">
+    <input type="file" name="file" multiple>
+    <p>Drag your files here or click in this area.</p>
+    <button type="submit">Upload</button>
+</form>
 
-<div id="dropbox">
-    <span class="message">Drop images here to upload. <br /></span>
-</div>
-
-<!-- Including The jQuery Library -->
-<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-
-<!-- Including the HTML5 Uploader plugin -->
-<script src="assets/js/jquery.filedrop.js"></script>
-
-<!-- The main script file -->
-<script src="assets/js/script.js"></script>
+<script src="../static/assets/js/upload.js" th:src="@{/assets/js/upload.js}"></script>
 
 
 </body>

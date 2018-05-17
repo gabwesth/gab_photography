@@ -1,4 +1,4 @@
-package com.springproject.webformtrialwiths3.Service;
+package com.springproject.gab_photography.Service;
 
 import com.amazonaws.SdkClientException;
 import com.amazonaws.auth.AWSCredentials;

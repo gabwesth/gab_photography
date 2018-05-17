@@ -1,7 +1,7 @@
 package com.springproject.gab_photography.Controller;
 
 import com.springproject.gab_photography.Dao.ImageRepository;
-import com.springproject.webformtrialwiths3.Service.EmailService;
+import com.springproject.gab_photography.Service.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

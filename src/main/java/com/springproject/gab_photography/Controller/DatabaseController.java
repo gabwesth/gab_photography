@@ -2,7 +2,7 @@ package com.springproject.gab_photography.Controller;
 
 import com.springproject.gab_photography.Dao.ImageRepository;
 import com.springproject.gab_photography.Entity.Image;
-import com.springproject.webformtrialwiths3.Service.AmazonClient;
+import com.springproject.gab_photography.Service.AmazonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -26,7 +26,7 @@ public class DatabaseController {
 
     @GetMapping("/uploadFile")
     public ModelAndView uploadform(){
-        ModelAndView page = new ModelAndView("upload");
+        ModelAndView page = new ModelAndView("uploadForm");
         return page;
     }
 
