@@ -38,6 +38,14 @@ public class GridController {
         return mv;
     }
 
+
+    @RequestMapping("/loginForm")
+    public ModelAndView login() {
+        ModelAndView mv = new ModelAndView("loginForm");
+        return mv;
+    }
+
+
     @PostMapping("webpage/mail")
     public ModelAndView mailform(@RequestParam(name = "user") String user,  @RequestParam(name = "email") String email, @RequestParam(name = "msg") String msg ){
 
