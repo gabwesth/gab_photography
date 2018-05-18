@@ -26,7 +26,7 @@ public class DatabaseController {
 
     @GetMapping("/uploadFile")
     public ModelAndView uploadform(){
-        ModelAndView page = new ModelAndView("uploadForm");
+        ModelAndView page = new ModelAndView("coolUpload");
         return page;
     }
 
