@@ -7,20 +7,27 @@
     <title>Title</title>
 </head>
 <body>
-<form name="img-result" method="POST", enctype="multipart/form-data" action="/upload" >
-<div class="wrapper">
-       <input class="no-image" id="img-result" type="file" name="file"> </input>
-</div>
+<form method="POST", enctype="multipart/form-data" action="/upload" >
+    <div class="wrapper">
+        <a class="no-image" id="img-result">  <input type="file" name="file" accept="image/*" onchange="loadFile(event)" multiple>  </a>
+    </div>
+
     <button class="show-button" type="submit" >Upload</button>
-<!--<div class="upload-result">-->
-    <!--<button class="hide-button" >Close</button>-->
-    <!--<pre class="upload-result__content">-->
-  <!--</pre>-->
-<!--</div>-->
 </form>
 
+<script>
 
-<script src="../static/assets/js/coolUpload.js" th:src="@{/assets/js/coolUpload.js}"></script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('img-result');
+            output.classList.remove('no-image');
+            output.style.backgroundImage = 'url(' + reader.result + ')';
+            document.querySelector('.show-button').style.display = 'block';
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+</script>
 
 
 </body>

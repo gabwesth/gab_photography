@@ -30,6 +30,12 @@ public class DatabaseController {
         return page;
     }
 
+    @GetMapping("/uploadForm")
+    public ModelAndView upload(){
+        ModelAndView page = new ModelAndView("uploadForm");
+        return page;
+    }
+
 
     @PostMapping("/upload")
     public String uploadFile(@RequestPart(value = "file") MultipartFile file,
