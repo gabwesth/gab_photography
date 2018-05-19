@@ -24,21 +24,24 @@ public class DatabaseController {
         this.amazonClient = amazonClient;
     }
 
+
+
+
     @GetMapping("/uploadFile")
     public ModelAndView uploadform(){
         ModelAndView page = new ModelAndView("coolUpload");
         return page;
     }
 
-    @GetMapping("/uploadForm")
-    public ModelAndView upload(){
-        ModelAndView page = new ModelAndView("uploadForm");
-        return page;
-    }
+//    @GetMapping("/uploadForm")
+//    public ModelAndView upload(){
+//        ModelAndView page = new ModelAndView("uploadForm");
+//        return page;
+//    }
 
 
     @PostMapping("/upload")
-    public String uploadFile(@RequestPart(value = "file") MultipartFile file,
+    public ModelAndView uploadFile(@RequestPart(value = "file") MultipartFile file,
                              @RequestParam(name = "id", defaultValue = "-1") int id,
                              @RequestParam(name = "name", defaultValue = "no_name") String name) {
 
@@ -47,14 +50,16 @@ public class DatabaseController {
         Image image = new Image(id, imageUrl, imageUrl);
 
         if(imageUrl.startsWith("ERROR")){
-            return imageUrl;
+            ModelAndView page = new ModelAndView("coolUpload");
+            return page;
         }else {
             image.setId(id);
             image.setS3link(imageUrl);
             image.setThumbnail(generateThumbnailname(imageUrl));
             ir.save(image);
 
-            return imageUrl;
+            ModelAndView page = new ModelAndView("coolUpload");
+            return page;
         }
 
     }
@@ -69,7 +74,7 @@ public class DatabaseController {
         ir.delete(image);
         this.amazonClient.deleteFileFromS3Bucket(url);
 
-        ModelAndView mv = new ModelAndView("imageGrid");
+        ModelAndView mv = new ModelAndView("coolGrid");
         mv.getModel().put("imageList", ir.findAll());
         return mv;
     }

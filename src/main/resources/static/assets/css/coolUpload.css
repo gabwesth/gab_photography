@@ -148,3 +148,62 @@ body {
     font-family: 'Source Code Pro';
     overflow-wrap: break-word;
 }
+
+nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    background: #1d343f;
+    z-index: 10002;
+    position: relative;
+    width: 4em;
+}
+
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 1em;
+    left: 0;
+}
+
+#nav ul li {
+    padding: 0;
+    width: 3.75em;
+    text-align: Center;
+    margin-bottom: 1em;
+}
+
+#nav ul li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#nav ul li a:hover {
+    color: white;
+}
+
+#nav ul li a.active {
+    color: #19B5FE;
+}
+@media screen and (max-width: 736px) {
+
+    #nav ul li {
+        width: 3.4em;
+    }
+
+}
+.icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+}

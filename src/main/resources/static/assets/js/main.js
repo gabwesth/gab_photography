@@ -4,6 +4,14 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
+
+$('img').mousedown(function (e) {
+    if(e.button == 1) { // right click
+        return false; // do nothing!
+    }
+}
+
+
 (function($) {
 
 	skel.breakpoints({

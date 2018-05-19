@@ -41,16 +41,16 @@
             <!-- Photo Galleries -->
             <div class="gallery">
                 <header class="special">
-                    <h2>Samoens</h2>
+                    <h2>Winter</h2>
                 </header>
                 <div class="content">
                     <div class="media" th:each="Image : ${imageList}">
-                        <a th:href="${Image.S3link}"><img th:src="${Image.thumbnail}" alt="" title="This right here is a caption." /></a>
+                        <a th:href="${Image.S3link}"><img th:src="${Image.thumbnail}" alt="" /></a>
                     </div>
                 </div>
-                <footer>
-                    <a href="gallery.html" class="button big" style="background-color:#1d343f ">View Full Gallery</a>
-                </footer>
+                <!--<footer>-->
+                    <!--<a href="gallery.html" class="button big" style="background-color:#1d343f ">View Full Gallery</a>-->
+                <!--</footer>-->
             </div>
         </section>
 
@@ -101,6 +101,7 @@
         </footer>
     </section>
 </div>
+
 
 <!-- Scripts -->
 <script th:src="@{assets/js/jquery.min.js}"></script>

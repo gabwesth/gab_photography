@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th=" http://www.thymeleaf.org">
+<head>
+    <title>Snapshot by TEMPLATED</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/assets/css/grid.css"  th:href="@{/assets/css/grid.css}"/>
+
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{https://use.fontawesome.com/releases/v5.0.13/css/all.css}" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{css/fontawesome-all.css}" href="/static/css/fontawesome-all.css" >
+
+</head>
+<body>
+<div class="page-wrap">
+
+    <nav id="nav">
+        <ul>
+            <li><a th:href="@{/webpage}" class="active"><span class="icon fa-home"></span></a></li>
+            <li><a th:href="@{/images}"><span class="icon fa-camera-retro"></span></a></li>
+            <li><a th:href="@{/uploadFile}"><span class="fas fa-upload"></span></a></li>
+            <li><a th:href="@{/login}"><span class="far fa-user"></span></a></li>
+        </ul>
+    </nav>
+    <section id="main">
+        <section id="banner"   style="background-color:  #2a4959 ">
+            <div class="inner">
+                <h1>Gallery</h1>
+            </div>
+        </section>
+
+        <section id="galleries">
+            <div class="gallery">
+                <form id="delete" th:action="@{/deleteFile}" method="get" >
+                <div class="content">
+
+                    <div class="media" th:each="Image : ${imageList}">
+                        <a th:href="${Image.S3link}"><img th:src="${Image.thumbnail}" alt="" /></a>
+                        <button class="btn" th:value = "${Image.id}" name="id" onclick="javascript:getUniqueButtonValue($(this).val()); ">Delete</button>
+                    </div>
+
+                </div>
+                </form>
+            </div>
+        </section>
+    </section>
+
+</div>
+
+
+<!-- Scripts -->
+<script th:src="@{assets/js/jquery.min.js}"></script>
+<script th:src="@{assets/js/jquery.poptrox.min.js}"></script>
+<script th:src="@{assets/js/jquery.scrolly.min.js}"></script>
+<script th:src="@{assets/js/skel.min.js}"></script>
+<script th:src="@{assets/js/util.js}"></script>
+<script th:src="@{assets/js/main.js}"></script>
+
+</body>
+</html>

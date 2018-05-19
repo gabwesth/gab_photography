@@ -22,14 +22,13 @@ public class GridController {
     @Autowired
     EmailService emailService;
 
-
     @GetMapping("/images")
-    public ModelAndView showGrid() {
-        ModelAndView mv = new ModelAndView("imageGrid");
+    public ModelAndView prova(){
+        ModelAndView mv = new ModelAndView("coolGrid");
         mv.getModel().put("imageList", ir.findAll());
-
         return mv;
     }
+
 
     @GetMapping("/webpage")
     public ModelAndView webpage() {

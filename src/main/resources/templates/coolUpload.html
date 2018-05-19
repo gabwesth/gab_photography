@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/assets/css/coolUpload.css" th:href="@{/assets/css/coolUpload.css}" />
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{https://use.fontawesome.com/releases/v5.0.13/css/all.css}" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{css/fontawesome-all.css}" href="/static/css/fontawesome-all.css" >
 
     <title>Title</title>
 </head>
 <body>
+
+    <nav id="nav">
+        <ul>
+            <li><a th:href="@{/webpage}"><span class="icon fa-home"></span></a></li>
+            <li><a th:href="@{/images}"><span class="icon fa-camera-retro"></span></a></li>
+            <li><a th:href="@{/uploadFile}"><span class="fas fa-upload"></span></a></li>
+            <li><a th:href="@{/login}"><span class="far fa-user"></span></a></li>
+        </ul>
+    </nav>
+
+
 <form method="POST", enctype="multipart/form-data" action="/upload" >
     <div class="wrapper">
         <a class="no-image" id="img-result">  <input type="file" name="file" accept="image/*" onchange="loadFile(event)" multiple>  </a>
@@ -14,6 +28,8 @@
 
     <button class="show-button" type="submit" >Upload</button>
 </form>
+
+
 
 <script>
 
