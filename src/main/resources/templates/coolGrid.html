@@ -6,10 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../static/assets/css/grid.css"  th:href="@{/assets/css/grid.css}"/>
-
     <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" th:href="@{https://use.fontawesome.com/releases/v5.0.13/css/all.css}" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{css/fontawesome-all.css}" href="/static/css/fontawesome-all.css" >
+
 
 </head>
 <body>
@@ -17,10 +15,9 @@
 
     <nav id="nav">
         <ul>
-            <li><a th:href="@{/webpage}" class="active"><span class="icon fa-home"></span></a></li>
+            <li><a th:href="@{/webpage}"><span class="icon fa-home"></span></a></li>
             <li><a th:href="@{/images}"><span class="icon fa-camera-retro"></span></a></li>
-            <li><a th:href="@{/uploadFile}"><span class="fas fa-upload"></span></a></li>
-            <li><a th:href="@{/login}"><span class="far fa-user"></span></a></li>
+            <li><a th:href="@{/uploadFile}"><span class="icon fa-upload"></span></a></li>
         </ul>
     </nav>
     <section id="main">
@@ -50,11 +47,6 @@
 
 
 <!-- Scripts -->
-<script th:src="@{assets/js/jquery.min.js}"></script>
-<script th:src="@{assets/js/jquery.poptrox.min.js}"></script>
-<script th:src="@{assets/js/jquery.scrolly.min.js}"></script>
-<script th:src="@{assets/js/skel.min.js}"></script>
-<script th:src="@{assets/js/util.js}"></script>
 <script th:src="@{assets/js/main.js}"></script>
 
 </body>
