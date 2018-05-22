@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../static/assets/css/grid.css"  th:href="@{/assets/css/grid.css}"/>
-    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -33,7 +32,7 @@
                 <div class="content">
 
                     <div class="media" th:each="Image : ${imageList}">
-                        <a th:href="${Image.S3link}"><img th:src="${Image.thumbnail}" alt="" /></a>
+                        <a th:href="${Image.S3link}"><img th:src="${Image.thumbnail}" src="https://s3-us-west-2.amazonaws.com/my-amazing-spring-bucket/thumbnail_1526673301285-samoens-21.jpg" alt="" /></a>
                         <button class="btn" th:value = "${Image.id}" name="id" onclick="javascript:getUniqueButtonValue($(this).val()); ">Delete</button>
                     </div>
 
